@@ -13,7 +13,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-|e-mail|text|null: false, unique: true|
+|e-mail|string|null: false, unique: true|
 
 ### Association
 - has_many :members
@@ -35,8 +35,8 @@
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|index: true, null: false, foreign_key: true|
+|group_id|integer|index: true, null: false, foreign_key: true|
 |image|string|
 |body|text|
 
