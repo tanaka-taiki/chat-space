@@ -39,7 +39,7 @@
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |image|string|
-|text|text|
+|body|text|
 
 ### Association
 - belongs_to :user
