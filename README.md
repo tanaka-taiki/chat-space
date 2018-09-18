@@ -16,8 +16,8 @@
 |e-mail|text|null: false, unique: true|
 
 ### Association
-- has_many :groups, :through: members
 - has_many :members
+- has_many :groups, :through: members
 - has_many :messages
 
 
@@ -28,8 +28,8 @@
 |name|text|null: false, foreign_key: true|
 
 ### Association
-- has_many :users, :through: members
 - has_many :members
+- has_many :users, :through: members
 - has_many :messages
 
 
