@@ -12,7 +12,7 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|text|null: false, foreign_key: true|
+|name|string|null: false|
 |e-mail|text|null: false, unique: true|
 
 ### Association
@@ -24,8 +24,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|name|text|null: false, foreign_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :members
