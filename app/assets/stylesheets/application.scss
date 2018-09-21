@@ -1,14 +1,16 @@
 @import "./reset";
 
-@import "top_content";
+@import "./_variable";
 
-@import "left_nav";
+@import "top-content";
 
-@import "main_head";
+@import "left-nav";
 
-@import "main_content";
+@import "main-head";
 
-@import "main_footer";
+@import "main-content";
+
+@import "main-footer";
 
 
 @import "font-awesome-sprockets";

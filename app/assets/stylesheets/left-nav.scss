@@ -1,4 +1,4 @@
-.left_nav{
+.left-nav{
   width: 260px;
   height: 100%;
   float: left;
@@ -6,29 +6,29 @@
   background-color: #2f3e51;
   z-index: 1;
 
-  .head_li{
+  .left-nav__head-li{
     background-color: #253141;
     height: 100px;
     width: 220px;
     padding-right: 20px;
     padding-left: 20px;
 
-    .p1{
+    .left-nav__head-li__p1{
       font-size: 16px;
-      color: #FFFFFF;
+      color: $menuTextColor;
       position: relative;
       top: 35px;
     }
 
-    .side_icon{
+    .left-nav__head-li__side-icon{
       position: absolute;
       top: 35px;
       right: 20px;
-      color: white;
+      color: $menuTextColor;
     }
   }
 
-  .li{
+  .left-nav__li{
     background-color: #2f3e51;
     padding-top: 20px;
     border-bottom: 20px;
@@ -36,13 +36,13 @@
     padding-right: 20px;
     padding-left: 20px;
 
-    .p2{
-      color: #FFFFFF;
+    .left-nav__li__p2{
+      color: $menuTextColor;
       font-size: 15px;
     }
 
-    .p3{
-      color: #FFFFFF;
+    .left-nav__li__p3{
+      color: $menuTextColor;
       font-size: 11px;
       padding-top: 5px;
     }

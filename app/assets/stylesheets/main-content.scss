@@ -1,4 +1,4 @@
-.main_content{
+.main__main-content{
   background-color: rgba(170,170,170,0.1);
   height: 800px;
   width: calc(100vw - 300px);
@@ -7,28 +7,28 @@
   float: right;
   padding-top: 100px;
 
-  .space{
+  .main__main-content__space{
     background-color: rgba(170,170,170,0.01);
     height: 6px;
   }
 
-  .p1{
+  .main__main-content__li__p1{
     font-size: 16px;
-    color: #434A54;
+    color: $mainTextColor;
     padding-top: 40px;
     display: table-cell;
   }
 
-  .p2{
+  .main__main-content__li__p2{
     font-size: 12px;
     color: #999999;
     display: table-cell;
     padding-left: 10px;
   }
 
-  .p3{
+  .main__main-content__li__p3{
     font-size: 14px;
-    color: #434A54;
+    color: $mainTextColor;
     padding-top: 10px;
   }
 }

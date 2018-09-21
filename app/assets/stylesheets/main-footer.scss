@@ -1,4 +1,4 @@
-.main_footer{
+.main__main-footer{
   height: 90px;
   background-color: rgba(170,170,170,0.2);
   width: calc(100% - 300px);
@@ -9,7 +9,7 @@
   right: 0;
   position: fixed;
 
-  .textarea{
+  .main__main-footer__back__textarea{
     height: 50px;
     width: calc(100% - 180px);
     padding-left: 10px;
@@ -18,30 +18,30 @@
     top: 20px;
     bottom: 20px;
 
-    .p1{
+    .main__main-footer__back__textarea__p1{
       opacity: 0.2;
       position: absolute;
       top: 30%;
     }
 
-    .icon{
+    .main__main-footer__back__textarea__icon{
       position: absolute;
       right: 10px;
       top: 30%;
     }
   }
 
-  .send_box{
+  .main__main-footer__back__send_box{
     width: 34px;
     height: 50px;
-    background-color: #38AEF0;
+    background-color: $botanColor;
     position: absolute;
     top: 20px;
     right: 40px;
     padding-right: 25px;
     padding-left: 20px;
 
-    .p2{
+    .main__main-footer__back__send_box__p2{
       color: white;
       position: absolute;
       top: 30%;
