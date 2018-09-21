@@ -1,0 +1,41 @@
+.main_head{
+  height: 100px;
+  width: calc(100% - 300px);
+  margin-left: 260px;
+  padding-left: 40px;
+  background-color: white;
+  float: right;
+  position: fixed;
+  z-index: 1;
+
+  .p1{
+    color: #333333;
+    font-size: 20px;
+    padding-top: 35px;
+    padding-bottom: 15px;
+  }
+
+  .p2{
+    color: #999999;
+    font-size: 12px;
+  }
+
+  .right_box{
+    height: 40px;
+    width: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    right: 40px;
+    top: 28px;
+    border: solid;
+    border-color: #38AEF0;
+
+    .p3{
+      color: #38AEF0;
+      position: absolute;
+      top: 10px;
+    }
+  }
+}
+

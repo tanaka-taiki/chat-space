@@ -1,0 +1,51 @@
+.left_nav{
+  width: 260px;
+  height: 100%;
+  float: left;
+  position: fixed;
+  background-color: #2f3e51;
+  z-index: 1;
+
+  .head_li{
+    background-color: #253141;
+    height: 100px;
+    width: 220px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    .p1{
+      font-size: 16px;
+      color: #FFFFFF;
+      position: relative;
+      top: 35px;
+    }
+
+    .side_icon{
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      color: white;
+    }
+  }
+
+  .li{
+    background-color: #2f3e51;
+    padding-top: 20px;
+    border-bottom: 20px;
+    list-style: none;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    .p2{
+      color: #FFFFFF;
+      font-size: 15px;
+    }
+
+    .p3{
+      color: #FFFFFF;
+      font-size: 11px;
+      padding-top: 5px;
+    }
+  }
+}
+
