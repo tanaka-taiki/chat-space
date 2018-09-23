@@ -1,0 +1,13 @@
+.top-content{
+  background-color: $botanColor;
+  height: 20px;
+  width: 100%;
+  float: left;
+  position: fixed;
+  z-index: 2;
+
+  .top-content__p1{
+    color: white;
+    text-align: center;
+  }
+}
