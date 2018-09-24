@@ -1,17 +1,14 @@
 @import "./reset";
-
 @import "./_variable";
-
 @import "top-content";
-
 @import "left-nav";
-
 @import "main-head";
-
 @import "main-content";
-
 @import "main-footer";
-
+@import "modules/user";
+@import "modules/group";
+@import "modules/flash";
+@import "config/colors";
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
