@@ -1,0 +1,36 @@
+-# .side-bar
+-#   .header
+-#     %h3.header__name
+-#       = current_user.name
+-#     %ul.header__lists
+-#       %li.list
+-#         = link_to new_group_path do
+-#           .fa_icon 'pencil-square-o', class: 'icon'
+-#       %li.list
+-#         = link_to edit_user_path(current_user) do
+-#           .fa_icon 'cog', class: 'icon'
+-#   .groups
+-#     - current_user.groups.each do |group|
+-#       .group
+-#         = link_to group_messages_path(group) do
+-#           .group__name
+-#             = group.name
+-#           .group__message
+-#             メッセージはまだありません。
+.top-notification
+  .left-nav
+    .left-nav__head-li
+      .left-nav__head-li__p1=current_user.name
+      .left-nav__head-li__side-icon
+        = link_to new_group_path do
+          %i.fa.fa-edit
+        = link_to edit_user_path(current_user) do
+          %i.fa.fa-cog
+    .left-nav__li
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .left-nav__li__p2
+            = group.name
+          .left-nav__li__p3
+            = group.show_last_message
+

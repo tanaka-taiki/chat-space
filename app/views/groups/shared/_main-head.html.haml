@@ -1,0 +1,9 @@
+.main
+  .main__main-head
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .main__main-head__p1
+          = group.name
+        .main__main-head__p2="members: seo neko"
+        .main__main-head__right_box
+          .main__main-head__right_box__p3="Edit"

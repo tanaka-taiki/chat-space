@@ -1,4 +1,4 @@
-.left-nav{
+.side_bar{
   width: 260px;
   height: 100%;
   float: left;
@@ -6,7 +6,7 @@
   background-color: #2f3e51;
   z-index: 1;
 
-  .left-nav__head-li{
+  .side-bar__head-li{
     background-color: #253141;
     height: 100px;
     width: 220px;
@@ -24,14 +24,7 @@
       position: absolute;
       top: 35px;
       right: 20px;
-
-      .fa-edit{
-        color: $menuTextColor;
-      }
-
-      .fa-cog{
-        color: $menuTextColor;
-      }
+      color: $menuTextColor;
     }
   }
 
@@ -52,7 +45,6 @@
       color: $menuTextColor;
       font-size: 11px;
       padding-top: 5px;
-      padding-bottom: 30px;
     }
   }
 }
