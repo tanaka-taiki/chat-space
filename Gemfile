@@ -54,5 +54,15 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'haml-rails'
 gem 'erb2haml'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+  end
+gem 'rspec-rails', '~> 3.5'
+gem 'rails-controller-testing'
+gem 'factory_girl_rails', '~> 4.0'
