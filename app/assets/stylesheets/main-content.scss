@@ -1,11 +1,12 @@
 .main__main-content{
   background-color: rgba(170,170,170,0.1);
-  height: 800px;
+  height: 100%;
   width: calc(100vw - 300px);
   padding-left: 40px;
   clear: both;
   float: right;
   padding-top: 100px;
+  padding-bottom: 90px;
 
   .main__main-content__space{
     background-color: rgba(170,170,170,0.01);
