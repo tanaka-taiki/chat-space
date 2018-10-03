@@ -7,7 +7,7 @@ $(function() {
                   </div>
                   <div class="main__main-content__li__p3">
                   <p class="lower-message__content">${main.content}</p>
-                      ${image}
+                    ${image}
                   </div>`
     return html;
   }
@@ -15,7 +15,7 @@ $(function() {
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-    var url = $(this).attr('action')
+    var url = $(this).attr('action');
 
     $.ajax({
       url: url,
