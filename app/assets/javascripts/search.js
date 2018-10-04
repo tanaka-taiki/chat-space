@@ -40,7 +40,6 @@ $(function() {
   $(document).on("click", ".user-search-add", function (e) {
       var user_id = $(this).attr('data-user-id');
       var user_name = $(this).attr('data-user-name');
-      console.log(user_id,user_name);
       var html = buildChatmemberHTML(user_id,user_name);
       $("#chat-group-users").append(html)
       $(this).parent().remove();
