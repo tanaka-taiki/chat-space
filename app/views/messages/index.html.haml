@@ -5,10 +5,13 @@
 
 .main
   .main__main-head
-    .main__main-head__p1="sampleグループ"
-    .main__main-head__p2="members: seo neko"
+    .main__main-head__p1
+      = @group.name
+    .main__main-head__p2
+      = @group.users.pluck(:name).join(", ")
     .main__main-head__right_box
-      .main__main-head__right_box__p3="Edit"
+      .main__main-head__right_box__p3
+        = link_to "Edit", edit_group_path(@group)
 
 .main__main-content
   = render partial: "messages/main", collection: @messages
