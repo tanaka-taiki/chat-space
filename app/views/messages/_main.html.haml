@@ -1,10 +1,10 @@
-.main__main-content__li
+.main__main-content__li{ "data-message-id": "#{main.id}"}
   .main__main-content__li__p1
     = main.user.name
   .main__main-content__li__p2
     = main.created_at.strftime('%Y年%m月%d日 %H:%M')
-.main__main-content__li__p3
-  - if main.content.present?
-    %p.lower-message__content
-      = main.content
-  = image_tag main.image.url, class: 'lower-message__image' if main.image.present?
+  .main__main-content__li__p3
+    - if main.content.present?
+      %p.lower-message__content
+        = main.content
+    = image_tag main.image.url, class: 'lower-message__image' if main.image.present?
