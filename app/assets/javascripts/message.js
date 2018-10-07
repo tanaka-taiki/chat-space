@@ -1,17 +1,27 @@
 $(function() {
   function buildHTML(main){
-    main.image == null ? image = "" : image = `<img src="${main.image}", class='lower-message__image'></img>`
-    var html = `<div class="main__main-content__li">
+    var image = (main.image == null) ? "" : `<img src="${main.image}", class='lower-message__image'></img>`
+    var html = `<div class="main__main-content__li" data-message-id="${main.id}">
                   <div class="main__main-content__li__p1">${main.user_name}</div>
                   <div class="main__main-content__li__p2">${main.created_at}</div>
-                  </div>
                   <div class="main__main-content__li__p3">
-                  <p class="lower-message__content">${main.content}</p>
-                    ${image}
-                  </div>`
+                    <p class="lower-message__content">${main.content}</p>
+                      ${image}
+                  </div>
+                </div>`
     return html;
+  };
+
+  function scroll(){
+    $('html').animate({
+        scrollTop: $(document).height()
+        },500)
   }
 
+  function addmessage(data){
+    var html = buildHTML(data);
+    $('.main__main-content').append(html);
+  }
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
@@ -27,20 +37,39 @@ $(function() {
     })
 
     .done(function(data){
-      var html = buildHTML(data)
-      $('.main__main-content').append(html)
+      addmessage(data)
       $('#message_content').val('');
-      $('html').animate({
-        scrollTop: $(document).height()
-        },500)
+      scroll();
+      $('.main__main-footer__back__send_box__p2').prop('disabled', false)
+
     })
 
     .fail(function(){
       alert('error');
     })
-
-    .always(function() {
-      $('.main__main-footer__back__send_box__p2').prop('disabled', false)
-      })
   });
+  var interval = setInterval(function(){
+    var last_id = $('.main__main-content__li:last').data('message-id');
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+      $.ajax({
+        type: "GET",
+        url: location.href.json,
+        data: {last_id: last_id},
+        dataType: 'json'
+      })
+      .done(function(data) {
+        data.messages.forEach(function(message){
+          if (message.id > last_id ) {
+            addmessage(message)
+            scroll();
+          }
+        })
+       })
+
+      .fail(function() {
+       alert('自動更新に失敗しました');
+      });
+    } else {
+      clearInterval(interval);
+  }}, 5000 );
 });
