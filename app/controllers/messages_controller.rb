@@ -1,5 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_group
+  before_action :set_users
 
     def index
       set_users

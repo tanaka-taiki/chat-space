@@ -18,9 +18,9 @@ $(function() {
         },500)
   }
 
-  function message(data){
+  function addmessage(data){
     var html = buildHTML(data);
-      $('.main__main-content').append(html);
+    $('.main__main-content').append(html);
   }
   $('#new_message').on('submit', function(e) {
     e.preventDefault();
@@ -37,7 +37,7 @@ $(function() {
     })
 
     .done(function(data){
-      message(data)
+      addmessage(data)
       $('#message_content').val('');
       scroll();
       $('.main__main-footer__back__send_box__p2').prop('disabled', false)
@@ -51,26 +51,24 @@ $(function() {
   var interval = setInterval(function(){
     var last_id = $('.main__main-content__li:last').data('message-id');
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-    $.ajax({
-      type: "GET",
-      url: location.href.json,
-      data: {last_id: last_id},
-      dataType: 'json'
-    })
-    .done(function(data) {
-      data.messages.forEach(function(message){
-        if (message.id > last_id ) {
-          // message(message);
-          var html = buildHTML(message);
-          $('.main__main-content').append(html);
-          scroll();
-        }
+      $.ajax({
+        type: "GET",
+        url: location.href.json,
+        data: {last_id: last_id},
+        dataType: 'json'
       })
-     })
+      .done(function(data) {
+        data.messages.forEach(function(message){
+          if (message.id > last_id ) {
+            addmessage(message)
+            scroll();
+          }
+        })
+       })
 
-    .fail(function() {
-     alert('自動更新に失敗しました');
-    });
+      .fail(function() {
+       alert('自動更新に失敗しました');
+      });
     } else {
       clearInterval(interval);
   }}, 5000 );
