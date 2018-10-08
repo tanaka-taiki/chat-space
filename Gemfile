@@ -69,3 +69,6 @@ gem 'factory_girl_rails', '~> 4.0'
 gem 'faker'
 gem 'carrierwave'
 gem 'rmagick'
+group :production do
+  gem 'unicorn'
+end
