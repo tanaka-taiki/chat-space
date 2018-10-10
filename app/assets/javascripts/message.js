@@ -40,7 +40,7 @@ $(function() {
       addmessage(data)
       $('#message_content').val('');
       scroll();
-      $('.main__main-footer__back__send_box__p2').prop('disabled', false)
+      $('.main__main-footer__back__send_box__p2').prop('disabled', false);
 
     })
 
