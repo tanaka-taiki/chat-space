@@ -16,6 +16,7 @@ default: &default
   username: root
   # password: 'Ta1-0731'
   # socket: /tmp/mysql.sock
+  database: chat-space_production
   password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
 
