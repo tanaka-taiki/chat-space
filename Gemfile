@@ -65,7 +65,7 @@ group :development, :test do
 end
 gem 'rspec-rails', '~> 3.5'
 gem 'rails-controller-testing'
-gem 'factory_girl_rails', '~> 4.0'
+gem 'factory_bot_rails', '~> 4.0'
 gem 'faker'
 gem 'carrierwave'
 gem 'rmagick'
