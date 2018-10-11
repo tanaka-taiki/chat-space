@@ -69,5 +69,5 @@ gem 'mini_magick'
 gem 'faker'
 gem 'carrierwave'
 gem 'rmagick'
-
+gem 'fog-aws'
 
