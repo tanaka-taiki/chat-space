@@ -9,9 +9,9 @@ CarrierWave.configure do |config|
     provider: 'AWS',
     aws_access_key_id: Rails.application.secrets.aws_access_key_id,
     aws_secret_access_key: Rails.application.secrets.aws_secret_access_key,
-    region: 'us-east-1'
+    region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'ここにバケット名を入れます'
+  config.fog_directory  = 'kaedama-test'
   config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/kaedama-test'
 end
